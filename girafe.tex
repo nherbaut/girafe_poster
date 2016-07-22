@@ -20,7 +20,6 @@
 \pgfdeclarelayer{background}
 \pgfdeclarelayer{foreground}
 \pgfsetlayers{background,main,foreground}
-\usepackage[francais]{babel}
 \usepackage{times}
 \usepackage{helvet}
 %\usepackage{bookman}
@@ -131,34 +130,21 @@
   linewidth=2pt
   }
   % Eye Catcher
-  {\includegraphics[width=10em]{docknroll}} % No eye catcher for this poster. (eyecatcher=no above). If an eye catcher is present, the title is centered between eye-catcher and logo.
+  {\includegraphics[width=8em]{Giraffe-icon.png}} % No eye catcher for this poster. (eyecatcher=no above). If an eye catcher is present, the title is centered between eye-catcher and logo.
   % Title
   {\sf %Sans Serif
   %\bf% Serif
-   Développer, Tester et Livrer des \mbox{Microservices à l'aide de Docker}}
+   Graphical Interface for Automatic Function Embedding}
   % Authors
   {\sf %Sans Serif
   % Serif
   \vspace{0.5em}
-  Nicolas Herbaut (LaBRI, ENSEIRB-MATMECA) \mbox{David Bourasseau et Maxime Peterlin (ENSEIRB-MATMECA)}
+  Nicolas Herbaut, David Bourasseau, Daniel Negru
   }
   % University logo
-  {% The makebox allows the title to flow into the logo, this is a hack because of the L shaped logo.
-    \makebox[8em][r]{%
-      \begin{minipage}{16em}
-        \hfill
-        \begin{flushright}
-	        
-		
-		\includegraphics[height=4em]{labri}
-        \includegraphics[height=4em]{enseirb-matmeca}\\
-        \includegraphics[height=3em]{jdevlogo2015.png}
-		\end{flushright}
-      \end{minipage}
-    }
     
     
-  }
+  
 
   \tikzstyle{light shaded}=[top color=baposterBGtwo!30!white,bottom color=baposterBGone!30!white,shading=axis,shading angle=30]
 
@@ -183,53 +169,60 @@
 
   \headerbox{Contribution}{name=contribution,column=0,row=0}{
   \vspace{0.3em}
-  
-   Nous exposons un \textbf{retour d'expérience} sur le déroulé de 2 projets étudiants où nous avons utilisé Docker au service d'une architecture Microservice.
    
-   Nous expliquons comment nous avons utilisé Docker comme \textbf{unité de déploiement} pour les mises en production et comme \textbf{unité de développement} pour les tests et l'Intégration Continue.
+   We are demonstrating an application that allows \textbf{Internet Service Provider} (ISP) to provision \textbf{Virtual Content Delivery Network} (vCDN) on their network topology.
+   
+   We aim at establishing a possible \textbf{collaboration between ISP and CDN operators} that would allows the latters to embed a vCDN Service in an operator network by specifying a Service Level Agreement (SLA) Constract that would keep ISP topology private while letting the CDN controlling some low level network capabilities of content delivery.
+   
+   Our algorithm increased the request acceptance rate by 52\% and decreased the consumed bandwidth by 31\%.
+   
    
    \vspace{1em}
-   \textbf{Mots clés}: \textit{Docker, Architecture Microservice, Architecture RestFul, Intégration Continue, Jenkins, Tests Unitaires, Tests d'intégration, Java, Mock.}
+   \textbf{Keywords}: \textit{Service Function Chaining, Virtual Network Functions, ISP, CDN, Collaboration, Software Defined Networks}
 
 
  }
-   \headerbox{Cobaye: Le Projet SnapMail}{name=project,column=1,span=2,row=0}{
+   \headerbox{High Level Architecture}{name=project,column=1,span=2,row=0}{
 
    \begin{multicols}{2}
 	   
 			
-			\begin{minipage}{0.5\textwidth}
+			\begin{minipage}{0.54\textwidth}
 			\vspace{1em}
-				\includegraphics[width=\textwidth]{snapmail}
-				\begin{center}\textbf{Plateforme privée d'hébergement de pièces jointes}
+				\includegraphics[width=\textwidth]{proposal.pdf}
+				\begin{center}\textbf{VCDN deployed in ISP Network}
 				
 				\end{center}
 				
 			\end{minipage}
 			
 				
-			
-			Pour pallier au problème des \textbf{pièces jointes volumineuses}, un server SMTP est déployé sur une passerelle résidentielle.
-			L'utilisateur configure son client mail avec ce server afin d'y faire transiter son courrier sortant. 
-			La passerelle va \textbf{détacher les pièces jointes}, \textbf{les stocker} et \textbf{les remplacer par des liens} dans le mail . Ces liens pointent vers les contenus originaux ainsi que vers des \textbf{versions optimisées} des videos (streaming adaptatif) et photos (converties et redimentionnées).
-			
-			Le projet est conçu comme un greffon à un autre projet de \textbf{réseau social distribué } également déployé sur les passerelles résidentielles.
+			\begin{itemize}
+				\item Goal: Instantiate a NFV platform within the ISP Network capable of hosting (VCDN) services
+				\item ISP manged NFVI-Point of Presence (POPs) are at the edge of the network, interconnected by physical links and switches that support SDN.
+				\item CDN manages a "CDN View" overlay that abstracts the ISP Topology
+				\item CDN providers manage CDN operations dynamically through an API eg. to decide which route is used, react to route congestion.
+			\end{itemize}
 			
 			
 	\end{multicols}
     }
  
-   \headerbox{Bénéfices des Microservices}{name=microdesc,column=0,row=0,below=contribution}{
+   \headerbox{Service Level Agreements}{name=sla,column=0,row=0,below=contribution}{
    
+   \begin{itemize}
+  \item SLAs are a way to formalize the CDN "demand" for connectivity. ISP responds to the SLA by pricing to the connectivity "offer" they supply. 
+  \item On top of video-streaming specific input, SLA contains the User area to be connected as well as the connection to the external CDN network through peering points.
+	   
+   \end{itemize}
   
   
   \begin{center}
-   \includegraphics[width=\textwidth]{msprinciples}
-   \textbf{Principes guidant les architectures Microservices.}
+   \includegraphics[width=\textwidth]{sla.png}
+   \textbf{Sample SLA}
    \end{center}
    
-   Les MS sont des \textbf{Services petits et autonomes qui fonctionnent ensembles}, promouvant un couplage lâche et une cohésion forte.
-   Les MS émergent des tendances actuelles de l'ingénieurie logicielle (\textit{Design Driven Development, Livraison Continue, Virtualisation, Agilité, mouvement DevOps, Antifragile}) etc.
+   
    
    
    
@@ -237,92 +230,95 @@
 
 
  }
-   \headerbox{Mise en place dans nos projets}{name=micro,column=1,span=2,row=0,below=project}{
-   \vspace{2em}
+   \headerbox{Results}{name=results,column=1,span=2,row=0,below=project}{
+   
    \begin{multicols}{2}
-		   \begin{minipage}{0.5\textwidth}
-						\includegraphics[width=\textwidth]{snapservices}
-						\begin{center}\textbf{Découpage selon les concepts métiers}
-						\vspace{2em}
+		   \begin{minipage}{0.6\textwidth}
+						\colorbox{white}{\includegraphics[width=0.8\textwidth]{0-edge-capacities.pdf}}
+						\begin{center}\textbf{Edge Capacity}
+						\end{center}
+					\end{minipage}
+				
+\begin{minipage}{0.6\textwidth}
+\vspace{3em}
+						\colorbox{white}{\includegraphics[width=0.8\textwidth]{0-node-capacitie.pdf}}
+						\begin{center}\textbf{Node Capacity}
+						
 						\end{center}
 					\end{minipage}
 					
+\begin{minipage}{0.6\textwidth}
+						\colorbox{white}{\includegraphics[width=0.8\textwidth]{0-embedding.pdf}}
+						\begin{center}\textbf{Embedding Rate}
+					
+						\end{center}
+					\end{minipage}
+				
+				\begin{itemize}
+					
+				\item Results show the embedding a random set of SLAs over the GEANT Topology.
+				\item We compare 4 strategies where SLA-derived Service Function Chains (SFC) are modified according to the topology, to minimizing embedding cost.
+				\item we use an ILP formulation to optimize exactly the SFC embedding problem
+				\item Our algorithm (VMG+vCDN) shows a 52\% increase of embedding requests, a 31\% decrease of network utilisation.
+				\item As we increase the number of vNF, we have a 3x increased node capacity consumption.
+					
+				\end{itemize}
 	
-	Les domaines sont suffisament différents pour que les contours métiers soient clairs: \textit{Réseau Social, Transcoding Multimédia, Email, Antivirus}. Nous choisissons de passer sous une architecture Microservices (MS) pour plusieurs raisons:
-	\vspace{1em}
-	\begin{itemize}
-		\item Les deux projets doivent être évalués indépendamment sans que l'un compromette l'autre. \MVRightarrow \  \textbf{séparation des dépots de sources, pas de code partagé, pas de base de données commune}.
-		\item Communication nécessaire entre services \MVRightarrow \ \textbf{Mise en place de l'API REST}.
-		\item Choix du meilleur langage pour chaque service (Java, Python) \MVRightarrow \ \textbf{Hétérogénéité des solutions techniques masquée derrière l'API}.
-		\item Nécessité de faire tourner les autres services en local pour développer le sien\MVRightarrow \ \textbf{Dockerisation des MS, déploiement des MS pré-configurés dans DockerHub, récupération automatique des images par le dev}.
-		\item Approche agile du développement entrainant une démo du produit global tous les 15 jours \MVRightarrow \ \textbf{déploiement de toute la solution avec Docker Compose en pré-prod. La livraison d'un service défectueux peut être reportée}.
-		
-	\end{itemize} 
+	
 	
 					
 	\end{multicols}
 	
-   \vspace{1.8em}
+   
  }
  
-   \headerbox{Typologie des tests}{name=cidesc,column=0,row=0,below=microdesc}{
-  
-  
+   \headerbox{Sample Embedding}{name=sampleembedding,column=0,span=1,row=0,below=sla}{
+   
    \begin{center}
-	\includegraphics[width=\textwidth]{tests}
-    \textbf{Trois niveaux de tests automatisés dans une architecture Microservices}
+   \colorbox{white}{\includegraphics[width=0.90\textwidth]{4x4-2.pdf}}
    \end{center}
+  \vspace{0.5em}
+  
+  
    
    
    
 
    
  }
-   \headerbox{Intégration Continue \& workflow de développement}{name=ci,column=1,span=2,row=0,below=micro}{
-   
-	\begin{center}
-	\includegraphics[width=\textwidth]{workflow}
-    \textbf{Workflow de développement}
-   
-   \end{center}
-    \begin{multicols}{2}
-    
-Tester une architecture Microservice montre certaines particularités par rapport aux monolithes.
-\begin{itemize}
-	\item En raison de l'homogénéité du métier, \textbf{les tests unitaires} sont plus simples à écrire. 
-	\item  \textbf{Les tests de services} nécessitent l'utilisation de mocks d'interfaces REST, que nous avons réalisé avec Montbank (http://www.mbtest.org/).
-	\item Une fois par jour, Jenkins réalise une série de \textbf{tests de bout en bout} en lançant un environnement iso-production des services et en faisant jouer des scénarios utilisateurs.
-	\item Grace au DockerHub, toutes les machines autorisées peuvent récupérer les images docker et les lancer à tout moment. Les \textbf{bugs sont donc plus facilement reproduits} sur la machine du développeur.
-\end{itemize}
 
-
-					
-	\end{multicols}
-  
-
- }
  
-   \headerbox{Références}{name=reference,column=0,row=0,below=cidesc}{
+   \headerbox{Références}{name=ref,column=1,span=2,row=0,below=results}{
+   
+   [1] Herbaut, N., D. Négru, D. Magoni, and P. A. Frangoudis, "Deploying a Content Delivery Service Function Chain on an SDN-NFV Operator Infrastructure", 2016 International Conference on Telecommunications and Multimedia (TEMU) , Heraklion, IEEE, 07/2016, In Press.
+   
+   
+   [2] Herbaut, N., G. Xilouris, and D. Negru, "The Surrogate vNF approach for Content Distribution", COMSOC Multimedia Communications Technical Committee E-Letter,, vol. 10, pp. 4–6, 2015.
+   
+   [3] D5.31 - Network Functions Implementation and Testing - T-NOVA WP5 Deliverable http://www.t-nova.eu/results/
+
     
-    [1] \textit{Blog} Microservice, de Martin Fowler http://bit.ly/1dI7ZJQ
+
     
-    [2] \textit{Livre} \underline{Building Microservices} Designing Fine-Grained Systems, Sam Newman, O'Reilly Media 215
-    
-    [3] \textit{Podcast} Software Engineering Radio, Episode 213: James Lewis on Microservices, http://bit.ly/1tkIbeN
    
     
   
   
-  \vspace{0.3em}
+  \vspace{1em}
   
  }
-   \headerbox{Exemples d'Architectures Microservices}{name=ack,column=1,span=2,row=0,below=ci}{
+   \headerbox{Thanks to}{name=sampleembedding,column=1,span=2,row=0,below=ref}{
  
  
- \includegraphics[width=0.33\textwidth]{docker}
- \includegraphics[width=0.33\textwidth]{netflix}
- \includegraphics[width=0.33\textwidth]{amazon}
- \vspace{0.05em}
+ \includegraphics[width=0.28\textwidth]{logo_university_of_bordeaux.pdf}   
+ \includegraphics[width=0.10\textwidth]{labri.png}
+ \includegraphics[width=0.40\textwidth]{t-nova.jpg}
+ \includegraphics[width=0.33\textwidth]{vio.jpg}
+ \includegraphics[width=0.25\textwidth]{systematic.png}
+ \includegraphics[width=0.20\textwidth]{temu.png}
+ 
+ 
+ \vspace{0.5em}
   
  }
  
