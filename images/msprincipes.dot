@@ -1,0 +1,25 @@
+digraph{
+	
+
+g [shape="box",style="rounded,filled", fillcolor="gold", label="Supervisés", fontsize="10"];
+c [shape="box",style="rounded,filled", fillcolor="gold", label="Conçus autour des\nconcepts métiers", fontsize="10"];
+d [shape="box",style="rounded,filled", fillcolor="gold", label="Automatisés", fontsize="10"];
+
+f [shape="box",style="rounded,filled", fillcolor="gold", label="Décentralisés", fontsize="10"];
+b [shape="box",style="rounded,filled", fillcolor="gold", label="Se déploient\nindépendamment", fontsize="10"];
+a [shape="box",style="rounded,filled", fillcolor="gold", label="Erreurs\nisolées", fontsize="10"];
+e [shape="box",style="rounded,filled", fillcolor="gold", label="Masquent les détails\nd'implémentation", fontsize="10"];
+ms [shape="box",style="rounded,filled,bold", fillcolor="skyblue", label="Microservices", fontsize="10", ];
+
+
+ms->a [len=1.2];
+ms->b [len=1.2];
+ms->c [len=1.2];
+ms->d [len=1.2];
+ms->e [len=1.2];
+ms->f[len=1.2] ;
+ms->g[len=1.2] ;
+
+bgcolor=transparent;	
+margin=0;
+}

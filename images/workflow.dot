@@ -1,0 +1,25 @@
+digraph{
+ rankdir=LR;
+dev [shape="box",style="rounded,filled", fillcolor="gold", label="Développeurs", fontsize="14"];
+git [shape="box",style="rounded,filled", fillcolor="gold", label="Git", fontsize="14"];
+jenkins [shape="box",style="rounded,filled", fillcolor="gold", label="Jenkins", fontsize="14"];
+nexus [shape="box",style="rounded,filled", fillcolor="gold", label="Nexus", fontsize="14"];
+dockerhub [shape="box",style="rounded,filled", fillcolor="gold", label="DockerHub", fontsize="14"];
+preprod [shape="box",style="rounded,filled", fillcolor="gold", label="Préproduction", fontsize="14"];
+
+dev->git [label="push code"];
+git -> jenkins [label="déclenche"];
+jenkins->dev [label="notifie si erreur"];
+jenkins -> jenkins [label="execute les tests\nconstruit les artefacts"];
+
+jenkins -> nexus [label="déploie les binaires"];
+jenkins -> dockerhub [label="déploie les images Docker"];
+preprod->dockerhub [label="toutes les nuits, va chercher les images et déploie"];
+dev->preprod [label="demo"];
+bgcolor=transparent;	
+margin=0;
+
+
+
+
+}
