@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.24748737"
-     inkscape:cx="900.04371"
-     inkscape:cy="31.260069"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="361.53866"
+     inkscape:cy="264.90474"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -923,12 +923,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeMr+ATJM2sfjBDsQAAAAAElFTkSuQmCC
     <rect
        style="color:#000000;fill:#fffcb3;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect2996"
-       width="263.64981"
-       height="32.324883"
+       width="716.19818"
+       height="40.406101"
        x="9.0913725"
        y="15.945671"
-       rx="0.097588226"
-       ry="0.88108957" />
+       rx="0.26509598"
+       ry="1.101362" />
     <text
        xml:space="preserve"
        style="font-size:26.39806557px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:cmr10;-inkscape-font-specification:cmr10"
@@ -943,12 +943,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeMr+ATJM2sfjBDsQAAAAAElFTkSuQmCC
     <rect
        style="color:#000000;fill:#fffcb3;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect3784"
-       width="225.26402"
-       height="40.406101"
-       x="25.253813"
-       y="169.48886"
-       rx="0.097588226"
-       ry="0.88108957" />
+       width="715.18799"
+       height="42.426407"
+       x="10.101524"
+       y="163.42795"
+       rx="0.30983168"
+       ry="0.92514408" />
     <text
        xml:space="preserve"
        style="font-size:26.39806557px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:cmr10;-inkscape-font-specification:cmr10"
@@ -961,14 +961,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeMr+ATJM2sfjBDsQAAAAAElFTkSuQmCC
          x="32.324879"
          y="191.71222">Number of Users</tspan></text>
     <rect
-       style="color:#000000;fill:#fffcb3;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:#fffcb3;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect3809"
-       width="193.9493"
-       height="51.51778"
-       x="29.294424"
-       y="309.90005"
-       rx="0.097588226"
-       ry="0.88108957" />
+       width="715.18799"
+       height="46.467018"
+       x="10.101525"
+       y="311.92035"
+       rx="0.35985658"
+       ry="0.79470825" />
     <text
        xml:space="preserve"
        style="font-size:26.39806557px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:cmr10;-inkscape-font-specification:cmr10"
@@ -981,14 +981,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeMr+ATJM2sfjBDsQAAAAAElFTkSuQmCC
          x="31.314732"
          y="346.26556">vCDN Hit Share (%)</tspan></text>
     <rect
-       style="color:#000000;fill:#fffcb3;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:#fffcb3;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect3834"
-       width="153.54318"
-       height="52.527931"
-       x="19.192898"
+       width="715.18799"
+       height="48.48732"
+       x="10.101525"
        y="460.41278"
-       rx="0.097588226"
-       ry="0.88108957" />
+       rx="0.45455569"
+       ry="0.81331342" />
     <text
        xml:space="preserve"
        style="font-size:26.39806557px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:125%;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:cmr10;-inkscape-font-specification:cmr10"
