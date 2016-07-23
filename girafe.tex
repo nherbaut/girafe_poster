@@ -170,11 +170,21 @@
   \headerbox{Contribution}{name=contribution,column=0,row=0}{
   \vspace{0.3em}
    
-   We are demonstrating an application that allows \textbf{Internet Service Provider} (ISP) to provision \textbf{Virtual Content Delivery Network} (vCDN) on their network topology.
    
-   We aim at establishing a possible \textbf{collaboration between ISP and CDN operators} that would allows the latters to embed a vCDN Service in an operator network by specifying a Service Level Agreement (SLA) Constract that would keep ISP topology private while letting the CDN controlling some low level network capabilities of content delivery.
-   
-   Our algorithm increased the request acceptance rate by 52\% and decreased the consumed bandwidth by 31\%.
+   Demonstration of the \underline{CDN-as-a-VNF model}.
+
+2 virtual functions:
+\begin{itemize}
+\item vCDN : virtual CDN (delivery phase)
+\item vMG : virtual Media Gateway (request phase)	
+\end{itemize}
+
+
+chained together \& optimally embedded inside the ISP topology $\rightarrow$ in order to respect the CDN-ISP collaboration contract (SLA).
+
+This permits to keep ISP topology private while letting the CDN control some low level network capabilities of content delivery.
+Our algorithm increased the request acceptance rate by 52\% and decreased the consumed bandwidth by 31\%.
+
    
    
    \vspace{1em}
@@ -198,10 +208,10 @@
 			
 				
 			\begin{itemize}
-				\item Goal: Instantiate a NFV platform within the ISP Network capable of hosting (VCDN) services
-				\item ISP manged NFVI-Point of Presence (POPs) are at the edge of the network, interconnected by physical links and switches that support SDN.
+				\item Goal: Instantiate a NFV platform within the ISP Network capable of hosting (vCDN) services
+				\item ISP managed NFVI-Point of Presence (POPs) are at the edge of the network, interconnected by physical links and switches that support SDN.
 				\item CDN manages a "CDN View" overlay that abstracts the ISP Topology
-				\item CDN providers manage CDN operations dynamically through an API eg. to decide which route is used, react to route congestion.
+				\item CDN providers manage CDN operations dynamically through an API e.g. to decide which route to use and react to route congestion.
 			\end{itemize}
 			
 			
@@ -211,14 +221,14 @@
    \headerbox{Service Level Agreements}{name=sla,column=0,row=0,below=contribution}{
    
    \begin{itemize}
-  \item SLAs are a way to formalize the CDN "demand" for connectivity. ISP responds to the SLA by pricing to the connectivity "offer" they supply. 
-  \item On top of video-streaming specific input, SLA contains the User area to be connected as well as the connection to the external CDN network through peering points.
+  \item SLAs are a way to formalize the CDN "demand" for connectivity. ISP responds to the SLA by pricing the connectivity "offer" they supply. 
+  \item On top of video-streaming specific input, the SLA contains the User area to be connected as well as the connection to the external CDN network through peering points.
 	   
    \end{itemize}
   
   
   \begin{center}
-   \includegraphics[width=\textwidth]{sla.png}
+   \includegraphics[width=\textwidth]{sla.pdf}
    \textbf{Sample SLA}
    \end{center}
    
@@ -235,31 +245,31 @@
    \begin{multicols}{2}
 		   \begin{minipage}{0.6\textwidth}
 						\colorbox{white}{\includegraphics[width=0.8\textwidth]{0-edge-capacities.pdf}}
-						\begin{center}\textbf{Edge Capacity}
+						\begin{center}\textbf{Network Resource Consumption}
 						\end{center}
 					\end{minipage}
 				
 \begin{minipage}{0.6\textwidth}
 \vspace{3em}
 						\colorbox{white}{\includegraphics[width=0.8\textwidth]{0-node-capacitie.pdf}}
-						\begin{center}\textbf{Node Capacity}
+						\begin{center}\textbf{Servers Resource Consumption}
 						
 						\end{center}
 					\end{minipage}
 					
 \begin{minipage}{0.6\textwidth}
 						\colorbox{white}{\includegraphics[width=0.8\textwidth]{0-embedding.pdf}}
-						\begin{center}\textbf{Embedding Rate}
+						\begin{center}\textbf{Requests Embedding Rate}
 					
 						\end{center}
 					\end{minipage}
 				
 				\begin{itemize}
 					
-				\item Results show the embedding a random set of SLAs over the GEANT Topology.
-				\item We compare 4 strategies where SLA-derived Service Function Chains (SFC) are modified according to the topology, to minimizing embedding cost.
+				\item Results show the embedding of a random set of SLAs over the GEANT Topology.
+				\item We compare 4 strategies where SLA-derived Service Function Chains (SFC) are modified according to the topology, in order to minimize embedding cost.
 				\item we use an ILP formulation to optimize exactly the SFC embedding problem
-				\item Our algorithm (VMG+vCDN) shows a 52\% increase of embedding requests, a 31\% decrease of network utilisation.
+				\item Our algorithm (VMG+vCDN) performs a 52\% increase in embedding requests, and a 31\% decrease in network utilisation.
 				\item As we increase the number of vNF, we have a 3x increased node capacity consumption.
 					
 				\end{itemize}
@@ -277,7 +287,7 @@
    \begin{center}
    \colorbox{white}{\includegraphics[width=0.90\textwidth]{4x4-2.pdf}}
    \end{center}
-  \vspace{0.5em}
+ 
   
   
    
@@ -290,12 +300,12 @@
  
    \headerbox{Références}{name=ref,column=1,span=2,row=0,below=results}{
    
-   [1] Herbaut, N., D. Négru, D. Magoni, and P. A. Frangoudis, "Deploying a Content Delivery Service Function Chain on an SDN-NFV Operator Infrastructure", 2016 International Conference on Telecommunications and Multimedia (TEMU) , Heraklion, IEEE, 07/2016, In Press.
+   [1] Herbaut, N., D. Négru, D. Magoni, and P. A. Frangoudis, "Deploying a Content Delivery Service Function Chain on an SDN-NFV Operator Infrastructure", 2016 International Conference on Telecommunications and Multimedia (TEMU) , Heraklion, IEEE, 07/2016
    
    
-   [2] Herbaut, N., G. Xilouris, and D. Negru, "The Surrogate vNF approach for Content Distribution", COMSOC Multimedia Communications Technical Committee E-Letter,, vol. 10, pp. 4–6, 2015.
+   [3] ]Herbaut, N., D. Négru, Y. Chen, P. A. Frangoudis, and A. Ksentini, "Content Delivery Networks as a Virtual Network Function: a Win-win ISP-CDN Collaboration", IEEE Global Communications Conference, 12/2016
    
-   [3] D5.31 - Network Functions Implementation and Testing - T-NOVA WP5 Deliverable http://www.t-nova.eu/results/
+   [3] D5.32 - Network Functions Implementation and Testing - T-NOVA WP5 Deliverable http://www.t-nova.eu/results/
 
     
 
@@ -309,16 +319,17 @@
  }
    \headerbox{Thanks to}{name=sampleembedding,column=1,span=2,row=0,below=ref}{
  
+ \includegraphics[width=0.3\textwidth]{logo_university_of_bordeaux.pdf}     
+ \includegraphics[width=0.1\textwidth]{labri.png}
+ \includegraphics[width=0.25\textwidth]{vio.pdf}
+ \includegraphics[width=0.25\textwidth]{t-nova.jpg}
+ \includegraphics[width=0.08\textwidth]{dvd2c.png}
  
- \includegraphics[width=0.28\textwidth]{logo_university_of_bordeaux.pdf}   
- \includegraphics[width=0.10\textwidth]{labri.png}
- \includegraphics[width=0.40\textwidth]{t-nova.jpg}
- \includegraphics[width=0.33\textwidth]{vio.jpg}
- \includegraphics[width=0.25\textwidth]{systematic.png}
- \includegraphics[width=0.20\textwidth]{temu.png}
+   
  
  
- \vspace{0.5em}
+ 
+ 
   
  }
  
